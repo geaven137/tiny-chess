@@ -8,7 +8,7 @@ A general chess engine in 4 KB of Python for the make.fun tiny-chess-01 bounty. 
 
 Design: 0x88 board, alpha-beta + PVS + null-move pruning (R=3) + check extensions, quiescence search (captures, promotions, check evasions), Zobrist transposition table, killer move ordering, Michniewski piece-square tables with king middlegame/endgame interpolation. Fixed 100,000-node budget per move — fully deterministic, no wall clock.
 
-`main.py` (4,022 bytes) is an lzma + base85 packed payload; unpacker and payload together sit inside the 4,096-byte cap. Standard library only, Python 3.13.
+`main.py` (3,257 bytes) is the kit-compressed entrypoint, built with the competition kit's own compressor from the readable engine source; unpacker and payload together sit inside the 4,096-byte cap. Standard library only, Python 3.13.
 
 ## Run it
 
